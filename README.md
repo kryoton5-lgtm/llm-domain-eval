@@ -157,4 +157,4 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ## Author
 
-**Pranjal Sunder Kadam** — Data Scientist @ KPMG India | IIT Bombay (Dual Degree, Aerospace Engineering) | AI Evaluation & NLP
+**Shubham Sunder Kadam** — Data Scientist @ KPMG India | IIT Bombay (Dual Degree, Aerospace Engineering) | AI Evaluation & NLP
