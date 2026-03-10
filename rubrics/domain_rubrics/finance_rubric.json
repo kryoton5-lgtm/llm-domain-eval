@@ -1,0 +1,18 @@
+{
+  "domain": "finance",
+  "extends": "../dbas_rubric.json",
+  "overrides": {
+    "accuracy": {
+      "indicators": {
+        "positive": ["correct financial formulas", "accurate market terminology", "valid accounting principles", "proper regulatory references"],
+        "negative": ["wrong valuation formula", "confused accounting terms", "outdated regulatory info", "fabricated market data"]
+      }
+    },
+    "depth": {
+      "indicators": {
+        "positive": ["quantitative analysis with worked examples", "considers market conditions", "discusses assumptions and limitations", "multi-scenario analysis"],
+        "negative": ["qualitative only when quantitative is needed", "ignores assumptions", "single-scenario thinking"]
+      }
+    }
+  }
+}

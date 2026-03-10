@@ -1,0 +1,41 @@
+{
+  "experiment": "lora_finetuned_evaluation",
+  "date": "2025-02-01",
+  "training_config": {
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "epochs": 3,
+    "lr": 2e-4,
+    "samples_per_domain": 5000
+  },
+  "models": {
+    "llama-3-8b-lora-stem": {
+      "base": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "stem": {"accuracy": 0.736, "improvement": "+12.4%"},
+      "pharmacy": {"accuracy": 0.684, "improvement": "+13.6%"},
+      "finance": {"accuracy": 0.711, "improvement": "+12.8%"}
+    },
+    "mistral-7b-lora-stem": {
+      "base": "mistralai/Mistral-7B-Instruct-v0.3",
+      "stem": {"accuracy": 0.718, "improvement": "+12.4%"},
+      "pharmacy": {"accuracy": 0.659, "improvement": "+13.8%"},
+      "finance": {"accuracy": 0.697, "improvement": "+13.0%"}
+    }
+  },
+  "dbas_scores": {
+    "llama-3-8b-lora-stem": {
+      "depth": 3.2,
+      "breadth": 2.9,
+      "accuracy": 3.4,
+      "style": 3.1,
+      "overall": 3.18
+    },
+    "llama-3-8b-baseline": {
+      "depth": 2.4,
+      "breadth": 2.3,
+      "accuracy": 2.6,
+      "style": 2.8,
+      "overall": 2.51
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "domain": "stem",
+  "extends": "../dbas_rubric.json",
+  "overrides": {
+    "accuracy": {
+      "indicators": {
+        "positive": ["correct use of formulas/equations", "proper units", "accurate constants", "valid derivations"],
+        "negative": ["wrong units", "dimensional analysis errors", "incorrect constants", "sign errors in equations"]
+      }
+    },
+    "depth": {
+      "indicators": {
+        "positive": ["shows mathematical derivation", "references first principles", "quantitative reasoning", "considers limiting cases"],
+        "negative": ["hand-wavy explanation", "skips critical steps", "no quantitative backing"]
+      }
+    }
+  }
+}

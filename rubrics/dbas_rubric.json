@@ -1,0 +1,58 @@
+{
+  "depth": {
+    "description": "Quality and sophistication of reasoning",
+    "levels": {
+      "4": "Expert-level reasoning with multi-step logic chains, considers edge cases and nuances, demonstrates deep domain understanding",
+      "3": "Solid reasoning that addresses the core problem correctly, minor gaps in explanation depth",
+      "2": "Surface-level explanation that identifies the right concept but lacks detailed reasoning",
+      "1": "Incorrect reasoning, missing key logical steps, or no reasoning provided"
+    },
+    "weight": 0.30,
+    "indicators": {
+      "positive": ["multi-step derivation", "considers exceptions", "explains why not just what", "references underlying principles"],
+      "negative": ["single-sentence answer", "no justification", "circular reasoning", "non-sequitur"]
+    }
+  },
+  "breadth": {
+    "description": "Coverage of relevant aspects and edge cases",
+    "levels": {
+      "4": "Covers all relevant aspects including edge cases, alternative approaches, and practical implications",
+      "3": "Covers main aspects of the topic with minor omissions",
+      "2": "Partial coverage, missing important aspects or perspectives",
+      "1": "Misses key aspects, addresses only a narrow slice of the question"
+    },
+    "weight": 0.25,
+    "indicators": {
+      "positive": ["multiple perspectives", "edge cases discussed", "practical implications noted", "alternatives mentioned"],
+      "negative": ["single viewpoint only", "ignores obvious sub-questions", "incomplete enumeration"]
+    }
+  },
+  "accuracy": {
+    "description": "Factual correctness and absence of hallucinations",
+    "levels": {
+      "4": "Entirely factually correct, no hallucinations, all claims verifiable",
+      "3": "Minor inaccuracies that don't affect overall correctness, no hallucinations",
+      "2": "Some factual errors present, possible hallucinated details",
+      "1": "Major factual errors, clear hallucinations, or fundamentally wrong information"
+    },
+    "weight": 0.30,
+    "indicators": {
+      "positive": ["verifiable claims", "correct terminology", "accurate numbers/dates", "proper attribution"],
+      "negative": ["fabricated references", "wrong formulas", "invented statistics", "contradicts established knowledge"]
+    }
+  },
+  "style": {
+    "description": "Clarity, structure, and domain-appropriate register",
+    "levels": {
+      "4": "Clear, well-structured, uses domain-appropriate terminology, good flow between ideas",
+      "3": "Clear with minor style issues, generally well-organized",
+      "2": "Understandable but poorly organized, inconsistent terminology or register",
+      "1": "Unclear, poorly structured, inappropriate register for the domain"
+    },
+    "weight": 0.15,
+    "indicators": {
+      "positive": ["logical paragraph flow", "consistent terminology", "appropriate detail level", "good use of examples"],
+      "negative": ["wall of text", "jargon without explanation", "inconsistent tone", "redundant repetition"]
+    }
+  }
+}

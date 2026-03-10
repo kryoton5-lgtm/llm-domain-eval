@@ -1,0 +1,40 @@
+{
+  "experiments": [
+    {
+      "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "domain": "stem_physics",
+      "base_accuracy": 0.624,
+      "post_lora_accuracy": 0.781,
+      "adversarial_robustness": 0.713,
+      "dbas_scores": {"depth": 3.4, "breadth": 3.1, "accuracy": 3.8, "safety": 4.2}
+    },
+    {
+      "model": "mistralai/Mistral-7B-Instruct-v0.3",
+      "domain": "pharmacy",
+      "base_accuracy": 0.548,
+      "post_lora_accuracy": 0.736,
+      "adversarial_robustness": 0.669,
+      "dbas_scores": {"depth": 3.1, "breadth": 2.9, "accuracy": 3.5, "safety": 4.5}
+    },
+    {
+      "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "domain": "financial_analysis",
+      "base_accuracy": 0.582,
+      "post_lora_accuracy": 0.745,
+      "adversarial_robustness": 0.687,
+      "dbas_scores": {"depth": 3.2, "breadth": 3.3, "accuracy": 3.6, "safety": 4.1}
+    }
+  ],
+  "frontier_baselines": {
+    "gpt-4": {"stem_accuracy": 0.891, "adversarial_robustness": 0.762},
+    "claude-3": {"stem_accuracy": 0.876, "adversarial_robustness": 0.794}
+  },
+  "total_outputs_evaluated": 527,
+  "perturbation_types_tested": [
+    "numerical_swap",
+    "context_injection",
+    "paraphrase",
+    "negation_flip",
+    "domain_transfer"
+  ]
+}

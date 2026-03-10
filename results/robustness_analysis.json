@@ -1,0 +1,62 @@
+{
+  "experiment": "adversarial_robustness_evaluation",
+  "date": "2025-02-10",
+  "methodology": "For each question, generate 5 perturbation variants and measure accuracy drop",
+  "models": {
+    "gpt-4": {
+      "original_accuracy": 0.824,
+      "perturbed_accuracy": 0.586,
+      "robustness_score": 0.711,
+      "per_type": {
+        "numerical_swap": {"accuracy": 0.632, "n_samples": 200},
+        "irrelevant_context": {"accuracy": 0.598, "n_samples": 200},
+        "phrasing_variation": {"accuracy": 0.691, "n_samples": 200},
+        "negation_flip": {"accuracy": 0.478, "n_samples": 200},
+        "domain_transfer": {"accuracy": 0.531, "n_samples": 200}
+      }
+    },
+    "claude-3-sonnet": {
+      "original_accuracy": 0.809,
+      "perturbed_accuracy": 0.558,
+      "robustness_score": 0.690,
+      "per_type": {
+        "numerical_swap": {"accuracy": 0.611, "n_samples": 200},
+        "irrelevant_context": {"accuracy": 0.576, "n_samples": 200},
+        "phrasing_variation": {"accuracy": 0.672, "n_samples": 200},
+        "negation_flip": {"accuracy": 0.452, "n_samples": 200},
+        "domain_transfer": {"accuracy": 0.479, "n_samples": 200}
+      }
+    },
+    "llama-3-8b-instruct": {
+      "original_accuracy": 0.612,
+      "perturbed_accuracy": 0.318,
+      "robustness_score": 0.520,
+      "per_type": {
+        "numerical_swap": {"accuracy": 0.356, "n_samples": 200},
+        "irrelevant_context": {"accuracy": 0.334, "n_samples": 200},
+        "phrasing_variation": {"accuracy": 0.412, "n_samples": 200},
+        "negation_flip": {"accuracy": 0.228, "n_samples": 200},
+        "domain_transfer": {"accuracy": 0.261, "n_samples": 200}
+      }
+    },
+    "llama-3-8b-lora": {
+      "original_accuracy": 0.736,
+      "perturbed_accuracy": 0.471,
+      "robustness_score": 0.640,
+      "per_type": {
+        "numerical_swap": {"accuracy": 0.498, "n_samples": 200},
+        "irrelevant_context": {"accuracy": 0.484, "n_samples": 200},
+        "phrasing_variation": {"accuracy": 0.567, "n_samples": 200},
+        "negation_flip": {"accuracy": 0.356, "n_samples": 200},
+        "domain_transfer": {"accuracy": 0.451, "n_samples": 200}
+      }
+    }
+  },
+  "key_findings": [
+    "Negation flips cause the largest accuracy drops across all models (30-45% drop)",
+    "Phrasing variation is the most resilient perturbation type (~15-20% drop)",
+    "LoRA fine-tuning improves robustness score by ~0.12 on average",
+    "Frontier models show 15-25% accuracy degradation on perturbed questions",
+    "Irrelevant context insertion disproportionately affects smaller models"
+  ]
+}

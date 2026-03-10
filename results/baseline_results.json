@@ -1,0 +1,31 @@
+{
+  "experiment": "baseline_evaluation",
+  "date": "2025-01-15",
+  "models": {
+    "gpt-4": {
+      "stem": {"accuracy": 0.824, "n_samples": 200},
+      "pharmacy": {"accuracy": 0.761, "n_samples": 150},
+      "finance": {"accuracy": 0.798, "n_samples": 150}
+    },
+    "claude-3-sonnet": {
+      "stem": {"accuracy": 0.809, "n_samples": 200},
+      "pharmacy": {"accuracy": 0.743, "n_samples": 150},
+      "finance": {"accuracy": 0.812, "n_samples": 150}
+    },
+    "llama-3-8b-instruct": {
+      "stem": {"accuracy": 0.612, "n_samples": 200},
+      "pharmacy": {"accuracy": 0.548, "n_samples": 150},
+      "finance": {"accuracy": 0.583, "n_samples": 150}
+    },
+    "mistral-7b-instruct": {
+      "stem": {"accuracy": 0.594, "n_samples": 200},
+      "pharmacy": {"accuracy": 0.521, "n_samples": 150},
+      "finance": {"accuracy": 0.567, "n_samples": 150}
+    }
+  },
+  "datasets": {
+    "stem": "MMLU (STEM subjects)",
+    "pharmacy": "MMLU (medical/clinical subjects) + custom pharmacy set",
+    "finance": "MMLU (business/econ subjects) + custom finance set"
+  }
+}

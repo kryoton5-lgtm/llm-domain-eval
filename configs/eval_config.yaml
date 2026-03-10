@@ -1,0 +1,11 @@
+model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+dataset_name: "truthfulqa"
+split: "validation"
+max_samples: null
+batch_size: 8
+max_new_tokens: 512
+temperature: 0.0
+quantize_4bit: true
+few_shot: 0
+domains: ["all"]
+output_dir: "results"

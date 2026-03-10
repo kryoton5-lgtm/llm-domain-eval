@@ -1,0 +1,18 @@
+{
+  "domain": "pharmacy",
+  "extends": "../dbas_rubric.json",
+  "overrides": {
+    "accuracy": {
+      "indicators": {
+        "positive": ["correct drug names and classes", "accurate dosage ranges", "valid mechanism of action", "proper contraindication listing"],
+        "negative": ["wrong drug class", "dangerous dosage info", "confused mechanisms", "omitted critical interactions"]
+      }
+    },
+    "breadth": {
+      "indicators": {
+        "positive": ["covers mechanism, dosing, side effects, and interactions", "mentions patient populations", "notes monitoring parameters"],
+        "negative": ["mechanism only without clinical context", "ignores drug interactions", "omits contraindications"]
+      }
+    }
+  }
+}

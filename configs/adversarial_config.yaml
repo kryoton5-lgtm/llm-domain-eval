@@ -1,0 +1,10 @@
+enabled_types:
+  - numerical_swap
+  - context_injection
+  - paraphrase
+  - negation_flip
+  - domain_transfer
+perturbations_per_question: 3
+numerical_scale_range: [0.5, 3.0]
+domain_swap_type: "physics_to_chemistry"
+random_seed: 42
